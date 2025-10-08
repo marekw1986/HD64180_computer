@@ -22547,6 +22547,16 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <label x="-185.42" y="5.08" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
+<net name="E" class="0">
+<segment>
+<pinref part="U$4" gate="G$1" pin="E"/>
+<wire x1="101.6" y1="317.5" x2="101.6" y2="325.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="A" pin="7"/>
+<wire x1="457.2" y1="60.96" x2="447.04" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
