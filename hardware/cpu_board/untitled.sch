@@ -22099,7 +22099,7 @@ Source: www.kingbright.com</description>
 <instance part="D2" gate="G$1" x="-162.56" y="-38.1" rot="R180"/>
 <instance part="D3" gate="G$1" x="-162.56" y="-43.18" rot="R180"/>
 <instance part="D4" gate="G$1" x="-162.56" y="-48.26" rot="R180"/>
-<instance part="R19" gate="G$1" x="-152.4" y="-35.56" rot="R90"/>
+<instance part="R19" gate="G$1" x="-152.4" y="-22.86" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -22715,10 +22715,12 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <wire x1="-200.66" y1="-20.32" x2="-200.66" y2="-15.24" width="0.1524" layer="91"/>
+<label x="-200.66" y="-15.24" size="1.4224" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="R19" gate="G$1" pin="2"/>
-<wire x1="-152.4" y1="-30.48" x2="-152.4" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="-17.78" x2="-152.4" y2="-15.24" width="0.1524" layer="91"/>
+<label x="-152.4" y="-15.24" size="1.4224" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="TXD1" class="0">
@@ -23928,6 +23930,7 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="-215.9" y1="-38.1" x2="-218.44" y2="-38.1" width="0.1524" layer="91"/>
+<label x="-218.44" y="-38.1" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="TX" class="0">
@@ -24111,7 +24114,8 @@ Source: www.kingbright.com</description>
 </segment>
 <segment>
 <pinref part="IC9" gate="A" pin="Y0"/>
-<wire x1="-170.18" y1="-33.02" x2="-165.1" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-170.18" y1="-33.02" x2="-144.78" y2="-33.02" width="0.1524" layer="91"/>
+<label x="-144.78" y="-33.02" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="!RAM_CS" class="0">
@@ -24137,8 +24141,9 @@ Source: www.kingbright.com</description>
 <wire x1="-144.78" y1="-43.18" x2="-152.4" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="R19" gate="G$1" pin="1"/>
 <wire x1="-152.4" y1="-43.18" x2="-157.48" y2="-43.18" width="0.1524" layer="91"/>
-<wire x1="-152.4" y1="-40.64" x2="-152.4" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="-27.94" x2="-152.4" y2="-43.18" width="0.1524" layer="91"/>
 <junction x="-152.4" y="-43.18"/>
+<label x="-144.78" y="-43.18" size="1.4224" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="OSC_OUT" class="0">
@@ -24534,7 +24539,8 @@ Source: www.kingbright.com</description>
 </segment>
 <segment>
 <pinref part="IC9" gate="A" pin="G2A"/>
-<wire x1="-198.12" y1="-48.26" x2="-205.74" y2="-48.26" width="0.1524" layer="91"/>
+<wire x1="-198.12" y1="-48.26" x2="-218.44" y2="-48.26" width="0.1524" layer="91"/>
+<label x="-218.44" y="-48.26" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="ROMSHADOW" class="0">
@@ -24544,7 +24550,8 @@ Source: www.kingbright.com</description>
 </segment>
 <segment>
 <pinref part="IC9" gate="A" pin="B"/>
-<wire x1="-198.12" y1="-35.56" x2="-205.74" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="-198.12" y1="-35.56" x2="-218.44" y2="-35.56" width="0.1524" layer="91"/>
+<label x="-218.44" y="-35.56" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="_A15" class="0">
@@ -24599,11 +24606,9 @@ Source: www.kingbright.com</description>
 </net>
 <net name="N$50" class="0">
 <segment>
-<pinref part="IC9" gate="A" pin="Y5"/>
-<wire x1="-170.18" y1="-45.72" x2="-167.64" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="-167.64" y1="-45.72" x2="-167.64" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="D4" gate="G$1" pin="C"/>
-<wire x1="-167.64" y1="-48.26" x2="-165.1" y2="-48.26" width="0.1524" layer="91"/>
+<pinref part="IC9" gate="A" pin="Y6"/>
+<wire x1="-165.1" y1="-48.26" x2="-170.18" y2="-48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$51" class="0">
