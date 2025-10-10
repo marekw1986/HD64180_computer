@@ -57,6 +57,8 @@ CBAR                EQU     3AH
 OMCR                EQU     3EH
 ICR                 EQU     3FH
 
+SYSCFG              EQU     0E0H
+
 ; CF REGS
 CFBASE              EQU     0A0H
 CFREG0              EQU     CFBASE+0	;DATA PORT
