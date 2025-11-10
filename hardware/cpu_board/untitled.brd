@@ -3775,7 +3775,7 @@ design rules under a new name.</description>
 <contactref element="U$4" pad="72"/>
 <via x="50.6222" y="25.8826" extent="1-16" drill="0.6" diameter="1.4224" shape="octagon"/>
 <via x="45.847" y="13.1572" extent="1-16" drill="0.6" diameter="1.4224" shape="octagon"/>
-<via x="29.5148" y="37.338" extent="1-16" drill="0.6" diameter="1.4224" shape="octagon"/>
+<via x="27.6098" y="37.338" extent="1-16" drill="0.6" diameter="1.4224" shape="octagon"/>
 <contactref element="U$3" pad="2"/>
 <contactref element="IC6" pad="10"/>
 <contactref element="IC6" pad="13"/>
