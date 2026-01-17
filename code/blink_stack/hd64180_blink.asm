@@ -15,7 +15,7 @@ START:
 ; Blink loop on PA
 ; ----------------------------
 LOOP:
-        LD   A, 08H
+        LD   A, 10H
         OUT0  (SYSCFG), A
         
         LD   C, 255

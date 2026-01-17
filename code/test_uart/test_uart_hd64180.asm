@@ -34,7 +34,7 @@ LOOP:
         LD A, 55H          ; UART to send
         CALL OUT_CHAR             
         
-        LD A, 08H
+        LD A, 10H
         OUT0 (SYSCFG), A
         
 		LD	C, 255
