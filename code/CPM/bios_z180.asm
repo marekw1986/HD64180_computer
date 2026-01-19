@@ -191,7 +191,7 @@ BIOS_CONIN_PROC:
         NOP                   ; Status stabilizing
         AND 80h               ; Mask RDRF
         JR Z, BIOS_CONIN_PROC ; Loop until data is ready
-        IN A, (RDR0)          ; Read received character
+        IN0 A, (RDR0)          ; Read received character
         RET
 	
 BIOS_CONOUT_PROC:
