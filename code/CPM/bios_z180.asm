@@ -44,7 +44,7 @@ BIOS_BOOT_PROC:
 		LD SP, BIOS_STACK
 
         ; Turn on ROM shadowing
-        LD A, 04H               ; SCR bit 7 = 0, bit 6 = 1, bit 5 = 1, bit3 = 1 (disable ROMs), other bits = 0
+        LD A, 20H               ; bit 5 = 1 (rom shadow), other bits = 0, LED turned off
         OUT0 (SYSCFG), A        ; Use definitions.asm to define SCR        
         
         NOP
@@ -181,15 +181,15 @@ GOCPM:
 		JP CCP		;Go to the CP/M for further processing
 	
 BIOS_CONST_PROC:
-        IN A, (STAT0)        ; Read ASCI0 status register
+        IN0 A, (STAT0)        ; Read ASCI0 status register
         NOP                        ; Allow hardware to update status
-        AND 01h               ; Bit 0 = RDRF (Receive Data Ready)
+        AND 80h               ; Bit 0 = RDRF (Receive Data Ready)
         RET
 	
 BIOS_CONIN_PROC:
-        IN A, (STAT0)         ; Read ASCI0 status
+        IN0 A, (STAT0)         ; Read ASCI0 status
         NOP                   ; Status stabilizing
-        AND 01h               ; Mask RDRF
+        AND 80h               ; Mask RDRF
         JR Z, BIOS_CONIN_PROC ; Loop until data is ready
         IN A, (RDR0)          ; Read received character
         RET

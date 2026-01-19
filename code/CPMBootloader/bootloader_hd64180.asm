@@ -20,6 +20,10 @@ INIT:   LD   HL, 0000H
         LD   (RTCTICK), HL
         XOR A
         LD  (KBDDATA), A
+        
+        ; Turn on LED
+        LD A, 10H
+        OUT0 (SYSCFG), A
 
         ; Setup stack to top of mapped RAM
         LD SP, 0FFDFH       ; Stack top
