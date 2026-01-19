@@ -29,24 +29,13 @@ INIT:   LD   HL, 0000H
         NOP
 
 ;------------------------------------------------------------
-; 1. Configure Timer 1 as baud rate generator
+; 1. Configure ASCI0 for 8 data bits, 1 stop, no parity
 ;------------------------------------------------------------
-        LD      A, 40H              ; TCR: enable Timer 1, internal clock, no external gate
-        OUT     (TCR), A
+        LD      A, 34H              ; CNTLA0: TE=1; RTS=1 ;8 bits, 1 stop, no parity (0b00110100)
+        OUT0     (CNTLA0), A
 
-        LD      A, 25                ; Reload value = 25 (≈9600 bps at 4 MHz)
-        OUT     (RLDR1L), A
-        XOR     A
-        OUT     (RLDR1H), A          ; High byte = 0
-
-;------------------------------------------------------------
-; 2. Configure ASCI0 for 8 data bits, 1 stop, no parity
-;------------------------------------------------------------
-        LD      A, 15H              ; CNTLA0: 8 bits, 1 stop, no parity
-        OUT     (CNTLA0), A
-
-        LD      A, 80H              ; CNTLB0: enable TX/RX, use internal timer clock
-        OUT     (CNTLB0), A
+        LD      A, 20H              ; CNTLB0: enable TX/RX, use internal timer clock
+        OUT0     (CNTLB0), A
 
 
         ; Wait before initializing CF card
