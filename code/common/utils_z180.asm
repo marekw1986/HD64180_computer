@@ -3,11 +3,11 @@
 OUT_CHAR:
 		PUSH AF
 OUT_CHAR_WAIT:    
-		IN   A, (STAT0)                 ;COME HERE TO DO OUTPUT
+		IN0   A, (STAT0)                 ;COME HERE TO DO OUTPUT
         BIT 1, A                        ;bit 1 - TDRE transmit data register empty (CTS must be LOW)
         JR Z, OUT_CHAR_WAIT             ;NOT READY, WAIT
         POP  AF                         ;READY, GET OLD A BACK
-        OUT  (TDR0), A                  ;AND SEND IT OUT
+        OUT0  (TDR0), A                  ;AND SEND IT OUT
 		RET
     
 DELAY:
