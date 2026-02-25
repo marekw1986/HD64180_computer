@@ -13,7 +13,7 @@ START:
         LD      A, 34H              ; CNTLA0: TE=1; RTS=1 ;8 bits, 1 stop, no parity (0b00110100)
         OUT0     (CNTLA0), A
 
-        LD      A, 20H              ; CNTLB0: enable TX/RX, use internal timer clock
+        LD      A, 01H              ; CNTLB0: enable TX/RX, use internal timer clock
         OUT0     (CNTLB0), A
 
 
